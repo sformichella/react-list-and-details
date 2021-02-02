@@ -1,8 +1,8 @@
 import React from 'react';
 import { 
   BrowserRouter as Router,
-  Route,
-  Switch
+  Switch,
+  Route
 } from 'react-router-dom';
 
 const App = () => {
