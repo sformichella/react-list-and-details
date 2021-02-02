@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import { 
   BrowserRouter as Router,
   Switch,
   Route
-} from 'react-router-dom';
-import Home from '../Home/Home';
-import List from '../List/List';
-import Details from '../Details/Details';
+} from "react-router-dom";
+import Home from "../Home/Home";
+import List from "../List/List";
+import Details from "../Details/Details";
 
 const App = () => {
   return (
