@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { getCharacter } from "../../services/avatarAPI";
 
 import CharacterDetails from "./CharacterDetails";
 
@@ -12,7 +13,7 @@ export default class Details extends Component {
   componentDidMount() {
     const { characterId } = this.props.location.state;
 
-    
+    getCharacter(characterId).then(character => this.setState({ character }));
   }
 
   render() {
