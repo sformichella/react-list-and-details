@@ -21,7 +21,7 @@ export default class Details extends Component {
     const { character } = this.state;
 
     return (
-      <CharacterDetails character={character}/>
+      <CharacterDetails {...character}/>
     );
   }
 }
