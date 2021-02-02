@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function CharacterDetails({ name, photoUrl }) {
   return (
@@ -8,3 +9,8 @@ export default function CharacterDetails({ name, photoUrl }) {
     </div>
   );
 }
+
+CharacterDetails.propTypes = {
+  name: PropTypes.string,
+  photoUrl: PropTypes.string
+};
