@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CharacterList from "./CharacterList";
 import getCharacters from "../../services/avatarAPI";
 
 export default class List extends Component {
@@ -12,14 +13,11 @@ export default class List extends Component {
   }
 
   render() {
+
+    const { characters } = this.state;
+
     return (
-      <ul>
-        {
-          this.state.characters.map(char => {
-            return <li key={char._id}>{char.name}</li>;
-          })
-        }
-      </ul>
+      <CharacterList characters={characters}/>
     );
   }
 }
