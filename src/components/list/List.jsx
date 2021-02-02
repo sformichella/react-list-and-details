@@ -1,17 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
+import getCharacters from "../../services/avatarAPI";
 
-const avatarAPI = "https://last-airbender-api.herokuapp.com/api/v1/";
-const characters = "characters";
+export default class List extends Component {
 
-export default function List() {
+  state = {
+    characters: []
+  }
 
-  const sample = fetch(avatarAPI + characters)
-    .then(res => res.json())
+  componentDidMount() {
+    getCharacters().then(characters => this.setState({ characters }));
+  }
 
-
-  return (
-    <div>
-      This is the list page.
-    </div>
-  );
+  render() {
+    return (
+      <ul>
+        {
+          this.state.characters.map(char => {
+            return <li key={char._id}>{char.name}</li>;
+          })
+        }
+      </ul>
+    );
+  }
 }
