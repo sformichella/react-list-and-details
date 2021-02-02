@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import PropTypes from "prop-types";
 
 export default function CharacterList({ characters }) {
   return (
@@ -11,3 +12,11 @@ export default function CharacterList({ characters }) {
     </ul>
   );
 }
+
+CharacterList.propTypes = {
+  characters: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    photoUrl: PropTypes.string.isRequired
+  })).isRequired
+};
