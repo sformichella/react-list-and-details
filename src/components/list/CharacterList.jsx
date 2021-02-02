@@ -8,9 +8,18 @@ export default function CharacterList({ characters }) {
     <ul>
       {
         characters.map(char => {
-          return <li key={char._id}>
-            <Link to={`/list/${char._id}`}>{char.name}</Link>
-          </li>;
+
+          const { _id: id, name } = char;
+          const details = {
+            pathname: `/list/${id}`,
+            state: { characterId: id }
+          };
+
+          return (
+            <li key={id}>
+              <Link to={ details }>{ name }</Link>
+            </li>
+          );
         })
       }
     </ul>
@@ -20,7 +29,6 @@ export default function CharacterList({ characters }) {
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.shape({
     _id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    photoUrl: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired
   })).isRequired
 };
