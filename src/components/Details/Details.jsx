@@ -11,7 +11,7 @@ export default class Details extends Component {
   }
 
   componentDidMount() {
-    const { characterId } = this.props.location.state;
+    const { characterId } = this.props.match.params.id;
 
     getCharacter(characterId).then(character => this.setState({ character }));
   }
@@ -27,5 +27,5 @@ export default class Details extends Component {
 }
 
 Details.propTypes = {
-  location: PropTypes.object.isRequired
+  match: PropTypes.object.isRequired
 };
