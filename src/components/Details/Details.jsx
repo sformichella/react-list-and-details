@@ -11,9 +11,10 @@ export default class Details extends Component {
   }
 
   componentDidMount() {
-    const { id: characterId } = this.props.match.params;
+    const { id } = this.props.match.params;
+    console.log(id);
 
-    getCharacter(characterId).then(character => this.setState({ character }));
+    getCharacter(id).then(character => this.setState({ character }));
   }
 
   render() {

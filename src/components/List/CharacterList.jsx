@@ -13,7 +13,7 @@ export default function CharacterList({ characters }) {
 
           return (
             <li key={id}>
-              <Link to={`/link/${id}`}>{ name }</Link>
+              <Link to={`/list/${id}`}>{ name }</Link>
             </li>
           );
         })
