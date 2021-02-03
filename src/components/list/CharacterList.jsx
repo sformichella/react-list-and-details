@@ -10,14 +10,10 @@ export default function CharacterList({ characters }) {
         characters.map(char => {
 
           const { _id: id, name } = char;
-          const details = {
-            pathname: `/list/${id}`,
-            state: { characterId: id }
-          };
 
           return (
             <li key={id}>
-              <Link to={ details }>{ name }</Link>
+              <Link to={`/link/${id}`}>{ name }</Link>
             </li>
           );
         })

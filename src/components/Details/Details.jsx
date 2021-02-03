@@ -17,7 +17,6 @@ export default class Details extends Component {
   }
 
   render() {
-
     const { character } = this.state;
 
     return (
