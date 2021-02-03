@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { getCharacter } from "../../services/avatarAPI";
+import { getCharacter } from "../../services/avatarAPI.js";
 
-import CharacterDetails from "./CharacterDetails";
+import CharacterDetails from "./CharacterDetails.jsx";
 
 export default class Details extends Component {
 

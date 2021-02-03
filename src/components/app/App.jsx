@@ -4,9 +4,9 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Home from "../Home/Home";
-import List from "../List/List";
-import Details from "../Details/Details";
+import Home from "../Home/Home.jsx";
+import List from "../List/List.jsx";
+import Details from "../Details/Details.jsx";
 
 const App = () => {
   return (
